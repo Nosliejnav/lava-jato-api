@@ -5,33 +5,36 @@
   <img src="/.github/SpringInitializr.png" width="100%">
 
   <div align="justify">
-  <h3>Tópicos abordados:</h3>
+  <h3>1. Cadastrar um cliente</h3>
 
-+ Introdução ao Spring Boot;
-+ Configurando o ambiente;
-+ Criando e executando projetos;
-+ Implementando Controles (@RestController);
-+ @PathVariable;
-+ Modelo;
-+ Vinculando controles e modelos;
-+ Testando APIs;
-+ Configurando banco de dados;
-+ Administrando dependências;
-+ Criando conexão com MySQL;
-+ Utilizando repositórios (@Repository);
-+ @Autowired;
-+ Implementando requisições (POST, GET, PUT e DELETE);
-+ Contabilizar registros (count);
-+ Ordenar registros;
-+ Filtrar dados (containing);
-+ StartsWith e EndsWith;
-+ @Query;
-+ @ResponseEntity;
-+ @Service;
-+ @Component;
-+ Implementando serviços;
-+ Validandado dados via JPA;
-+ ResponseEntityExceptionHandler.
+• Pessoas físicas devem incluir os dados:
+
+• Nome
+
+• CPF
+
+• Endereço
+
+• Telefone
+
+• Pessoas jurídicas devem incluir os dados:
+
+• Razão Social
+
+• CNPJ
+
+• Endereço
+
+• Telefone
+
+<h3>2. Atualizar os dados de um cliente</h3>
+• Permitir editar qualquer dado de um cliente já cadastrado.
+
+<h3>3. Deletar um cliente</h3>
+• Remover o cliente e seus veículos associados.
+
+<h3>4. Buscar um cliente</h3>
+• A busca deve ser feita usando CPF (para pessoa física) ou CNPJ (para pessoa jurídica).
 
 
   </div>

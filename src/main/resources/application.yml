@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: lavajatoapi
   h2:
     console.enabled: true
   datasource:

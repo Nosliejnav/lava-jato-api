@@ -41,6 +41,7 @@ public class ClienteController {
     public ResponseEntity<ClienteDTO> obterDetalhes(@PathVariable("id") String id){
         var idCliente = UUID.fromString(id);
         Optional<Cliente> clienteOptional  = service.obterPorId(idCliente);
+
         if(clienteOptional.isPresent()){
             Cliente cliente = clienteOptional.get();
             ClienteDTO dto = new ClienteDTO(

@@ -1,5 +1,6 @@
 package io.github.vanja.lavajatoapi.controller.dto;
 
+import io.github.vanja.lavajatoapi.model.Cliente;
 import io.github.vanja.lavajatoapi.model.Veiculo;
 
 import java.util.UUID;
@@ -9,6 +10,9 @@ public record ResultadoPesquisaVeiculoDTO(
         String marca,
         String modelo,
         String placa
+//        ClienteDTO cliente
+
+
         ) {
 
     public Veiculo mapearParaVeiculo(){
@@ -16,6 +20,8 @@ public record ResultadoPesquisaVeiculoDTO(
         veiculo.setMarca(this.marca);
         veiculo.setModelo(this.modelo);
         veiculo.setPlaca(this.placa);
+
+
         return veiculo;
     }
 }

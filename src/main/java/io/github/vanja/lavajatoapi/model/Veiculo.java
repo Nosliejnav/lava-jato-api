@@ -16,16 +16,13 @@ public class Veiculo {
     private UUID id;
 
     private String marca;
-
     private String modelo;
-
     private String placa;
 
     @ManyToOne(
             cascade = CascadeType.ALL,
        fetch = FetchType.LAZY
     )
-
     @JoinColumn(name = "id_cliente")
     private Cliente cliente;
 }

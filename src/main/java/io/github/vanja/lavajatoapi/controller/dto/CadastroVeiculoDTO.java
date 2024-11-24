@@ -5,6 +5,7 @@ import io.github.vanja.lavajatoapi.model.Veiculo;
 import java.util.UUID;
 
 public record CadastroVeiculoDTO(
+
         String marca,
         String modelo,
         String placa,

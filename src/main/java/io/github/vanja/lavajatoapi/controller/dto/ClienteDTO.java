@@ -8,14 +8,14 @@ public record ClienteDTO(
         UUID id,
         String nome,
         String cpf,
-//        String endereco,
+        String endereco,
         String telefone) {
 
     public Cliente mapearParaCliente(){
         Cliente cliente = new Cliente();
         cliente.setNome(this.nome);
         cliente.setCpf(this.cpf);
-//        cliente.setEndereco(this.endereco);
+        cliente.setEndereco(this.endereco);
         cliente.setTelefone(this.telefone);
         return cliente;
     }

@@ -47,7 +47,7 @@ public class ClienteController {
                     cliente.getId(),
                     cliente.getNome(),
                     cliente.getCpf(),
-//                    cliente.getEndereco(),
+                    cliente.getEndereco(),
                     cliente.getTelefone());
             return ResponseEntity.ok(dto);
         }
@@ -81,7 +81,8 @@ public class ClienteController {
                 cliente.getId(),
                 cliente.getNome(),
                 cliente.getCpf(),
-                cliente.getEndereco())
+                cliente.getEndereco(),
+                cliente.getTelefone())
                 ).collect(Collectors.toList());
 
         return ResponseEntity.ok(lista);
@@ -101,7 +102,7 @@ public class ClienteController {
         var cliente = clienteOptional.get();
         cliente.setNome(dto.nome());
         cliente.setCpf(dto.cpf());
-//        cliente.setId(dto.endereco());
+        cliente.setEndereco(dto.endereco());
         cliente.setTelefone(dto.telefone());
 
         service.atualizar(cliente);

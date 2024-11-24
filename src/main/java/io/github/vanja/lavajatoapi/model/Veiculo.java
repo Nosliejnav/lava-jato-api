@@ -19,7 +19,7 @@ public class Veiculo {
 
     private String modelo;
 
-    private BigDecimal placa;
+    private String placa;
 
     @ManyToOne(
             cascade = CascadeType.ALL,

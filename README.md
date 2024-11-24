@@ -36,6 +36,12 @@
 <h3>4. Buscar um cliente</h3>
 • A busca deve ser feita usando CPF (para pessoa física) ou CNPJ (para pessoa jurídica).
 
+<h3>Extras (Opcional):</h3>
 
+• Cadastro e gerenciamento de veículos para cada cliente:
+
+• Dados do veículo: Marca, Modelo e Placa.
+
+• Validação de CPF e CNPJ no momento do cadastro.
   </div>
 </div>

@@ -26,6 +26,9 @@
 }
 ```
 
+| Descrição                           |
+| :---------------------------------- |
+ **Dados do Cliente feitos em JSON** |
 
 <h3>2. Atualizar os dados de um cliente</h3>
 
@@ -42,12 +45,16 @@
 }
 ```
 
-• Permitir editar qualquer dado de um cliente já cadastrado.
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `long` ou `UUID` | **Atualiza o nome ou qualquer outro dado do Cliente cujo ID foi passado**. |
+
+<!-- • Permitir editar qualquer dado de um cliente já cadastrado. -->
 
 <h3>3. Deletar um cliente</h3>
 
 
-```http
+  ```http
   DELETE /clientes/:id
 ```
 
@@ -55,12 +62,24 @@
 | :---------- | :--------- | :------------------------------------------ |
 | `id`      | `long` ou `UUID` | **Deleta o Cliente do ID que foi passado**. |
 
-<!--• Remover o cliente e seus veículos associados. -->
+<!-- • Remover o cliente e seus veículos associados. -->
 
 <h3>4. Buscar um cliente</h3>
-• A busca deve ser feita usando CPF (para pessoa física) ou CNPJ (para pessoa jurídica).
 
-<h3>Extras (Opcional):</h3>
+  ```http
+  GET /clientes/:id
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `long` ou `UUID` | **Retorna o cliente do ID que foi passado**. |
+
+
+<!--• • A busca deve ser feita usando CPF (para pessoa física) ou CNPJ (para pessoa jurídica). -->
+
+##
+
+<h3>Extras :</h3>
 
 • Cadastro e gerenciamento de veículos para cada cliente:
 

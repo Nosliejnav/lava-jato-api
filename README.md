@@ -4,8 +4,28 @@
 <h1 style="border-bottom:none">Rotas da API</h1>
   <img src="/.github/SpringInitializr.png" width="100%">
 
+##
+
+  <h3> CRUD ( clientes ) </h3>
+
+##
+
   <div align="justify">
   <h3>1. Cadastrar um cliente</h3>
+
+  ```http
+  POST /clientes
+```
+
+  ```json
+{
+    "nome": "Fulano",
+    "cpf": "987.654.321-00",
+    "telefon": "(61) 9 9876-5432",
+    "endereco": "Quadra 01 Casa 01",
+    
+}
+```
 
 • Pessoas físicas devem incluir os dados:
 

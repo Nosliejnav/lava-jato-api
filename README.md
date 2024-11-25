@@ -23,35 +23,39 @@
     "cpf": "987.654.321-00",
     "telefon": "(61) 9 9876-5432",
     "endereco": "Quadra 01 Casa 01",
-    
 }
 ```
 
-• Pessoas físicas devem incluir os dados:
-
-• Nome
-
-• CPF
-
-• Endereço
-
-• Telefone
-
-• Pessoas jurídicas devem incluir os dados:
-
-• Razão Social
-
-• CNPJ
-
-• Endereço
-
-• Telefone
 
 <h3>2. Atualizar os dados de um cliente</h3>
+
+  ```http
+  PUT /clientes/:id
+```
+
+  ```json
+{
+    "nome": "Cliclano",
+    "cpf": "789.654.321-00",
+    "telefon": "(61) 9 8765-5432",
+    "endereco": "Quadra 02 Casa 02",
+}
+```
+
 • Permitir editar qualquer dado de um cliente já cadastrado.
 
 <h3>3. Deletar um cliente</h3>
-• Remover o cliente e seus veículos associados.
+
+
+```http
+  DELETE /clientes/:id
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `long` ou `UUID` | **Deleta o Cliente do ID que foi passado**. |
+
+<!--• Remover o cliente e seus veículos associados. -->
 
 <h3>4. Buscar um cliente</h3>
 • A busca deve ser feita usando CPF (para pessoa física) ou CNPJ (para pessoa jurídica).

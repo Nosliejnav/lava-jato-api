@@ -51,7 +51,9 @@ public class VeiculoController {
                     veiculo.getId(),
                     veiculo.getMarca(),
                     veiculo.getModelo(),
+
                     veiculo.getPlaca());
+
             return ResponseEntity.ok(dto);
         }
 

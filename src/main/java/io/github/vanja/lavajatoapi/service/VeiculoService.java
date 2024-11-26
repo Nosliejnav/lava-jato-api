@@ -1,5 +1,6 @@
 package io.github.vanja.lavajatoapi.service;
 
+import io.github.vanja.lavajatoapi.controller.dto.ResultadoPesquisaVeiculoDTO;
 import io.github.vanja.lavajatoapi.model.Cliente;
 import io.github.vanja.lavajatoapi.model.Veiculo;
 import io.github.vanja.lavajatoapi.repository.VeiculoRepository;
@@ -15,6 +16,10 @@ import java.util.UUID;
 public class VeiculoService {
 
     private final VeiculoRepository repository;
+
+//    public Veiculo salvar(ResultadoPesquisaVeiculoDTO dto){
+//        return repository.save(new Veiculo());
+//    }
 
     public Veiculo salvar(Veiculo veiculo){
         return repository.save(veiculo);

@@ -32,6 +32,11 @@ public class ClienteService {
         return repository.findById(id);
     }
 
+//    public Optional<Cliente> obterPorCpf(String cpf){
+//        return repository.findByCpf(cpf);
+//    }
+
+
     public void deletar(Cliente cliente){
         repository.delete(cliente);
     }

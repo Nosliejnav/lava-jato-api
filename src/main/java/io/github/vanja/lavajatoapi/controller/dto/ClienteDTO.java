@@ -4,12 +4,15 @@ import io.github.vanja.lavajatoapi.model.Cliente;
 
 import java.util.UUID;
 
+
 public record ClienteDTO(
         UUID id,
         String nome,
         String cpf,
         String endereco,
-        String telefone) {
+        String telefone
+
+) {
 
     public Cliente mapearParaCliente(){
         Cliente cliente = new Cliente();
@@ -19,4 +22,5 @@ public record ClienteDTO(
         cliente.setTelefone(this.telefone);
         return cliente;
     }
+
 }

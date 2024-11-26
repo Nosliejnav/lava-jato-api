@@ -1,14 +1,19 @@
 package io.github.vanja.lavajatoapi.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.UUID;
 
-@Entity
-@Table(name = "tb_veiculo")
+@NoArgsConstructor
+@AllArgsConstructor
 @Data
+@Entity
+@Table(name = "veiculo")
 public class Veiculo {
 
     @Id
@@ -19,10 +24,13 @@ public class Veiculo {
     private String modelo;
     private String placa;
 
+
     @ManyToOne(
-            cascade = CascadeType.ALL,
+//            cascade = CascadeType.ALL,
        fetch = FetchType.LAZY
     )
     @JoinColumn(name = "id_cliente")
     private Cliente cliente;
+
+
 }

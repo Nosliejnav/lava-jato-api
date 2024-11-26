@@ -1,7 +1,7 @@
 package io.github.vanja.lavajatoapi.repository;
 
 
-import io.github.vanja.lavajatoapi.model.Cliente;
+import io.github.vanja.lavajatoapi.domain.entity.Cliente;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -4,39 +4,82 @@
 <h1 style="border-bottom:none">Rotas da API</h1>
   <img src="/.github/SpringInitializr.png" width="100%">
 
+##
+
+  <h3> CRUD ( clientes ) ferramenta usada Postman </h3>
+
+##
+
   <div align="justify">
   <h3>1. Cadastrar um cliente</h3>
 
-• Pessoas físicas devem incluir os dados:
+  ```http
+  POST /clientes
+```
 
-• Nome
+  ```json
+{
+    "nome": "Fulano",
+    "cpf": "987.654.321-00",
+    "telefon": "(61) 9 9876-5432",
+    "endereco": "Quadra 01 Casa 01",
+}
+```
 
-• CPF
-
-• Endereço
-
-• Telefone
-
-• Pessoas jurídicas devem incluir os dados:
-
-• Razão Social
-
-• CNPJ
-
-• Endereço
-
-• Telefone
+| Descrição                           |
+| :---------------------------------- |
+ **Dados do Cliente feitos em JSON** |
 
 <h3>2. Atualizar os dados de um cliente</h3>
-• Permitir editar qualquer dado de um cliente já cadastrado.
+
+  ```http
+  PUT /clientes/:id
+```
+
+  ```json
+{
+    "nome": "Cliclano",
+    "cpf": "789.654.321-00",
+    "telefon": "(61) 9 8765-5432",
+    "endereco": "Quadra 02 Casa 02",
+}
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `long` ou `UUID` | **Atualiza o nome ou qualquer outro dado do Cliente cujo ID foi passado**. |
+
+<!-- • Permitir editar qualquer dado de um cliente já cadastrado. -->
 
 <h3>3. Deletar um cliente</h3>
-• Remover o cliente e seus veículos associados.
+
+
+  ```http
+  DELETE /clientes/:id
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `long` ou `UUID` | **Deleta o Cliente do ID que foi passado**. |
+
+<!-- • Remover o cliente e seus veículos associados. -->
 
 <h3>4. Buscar um cliente</h3>
-• A busca deve ser feita usando CPF (para pessoa física) ou CNPJ (para pessoa jurídica).
 
-<h3>Extras (Opcional):</h3>
+  ```http
+  GET /clientes/:id
+```
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| `id`      | `long` ou `UUID` | **Retorna o cliente do ID que foi passado**. |
+
+
+<!--• • A busca deve ser feita usando CPF (para pessoa física) ou CNPJ (para pessoa jurídica). -->
+
+##
+
+<h3>Extras :</h3>
 
 • Cadastro e gerenciamento de veículos para cada cliente:
 

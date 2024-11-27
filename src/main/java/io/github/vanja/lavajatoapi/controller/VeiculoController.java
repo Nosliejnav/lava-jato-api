@@ -63,29 +63,18 @@ public class VeiculoController {
 
 
     @DeleteMapping("{id}")
-    public ResponseEntity<Object> deletar(
-            @PathVariable("id") String id) {
+    public ResponseEntity<Void> deletar(@PathVariable("id") String id){
+        var idVeiculo = UUID.fromString(id);
+        Optional<Veiculo> veiculoOptional  = service.obterPorId(idVeiculo);
 
-        return service.obterPorId(UUID.fromString(id))
-                .map(Veiculo -> {
-                    service.deletar(Veiculo);
-                    return ResponseEntity.noContent().build();
+        if(veiculoOptional.isEmpty()){
+            return ResponseEntity.notFound().build();
+        }
 
-                }).orElseGet(() -> ResponseEntity.notFound().build());
+        service.deletar(veiculoOptional.get());
 
+        return  ResponseEntity.noContent().build();
     }
-//        var idVeiculo = UUID.fromString(id);
-//        Optional<Veiculo> veiculoOptional = service.obterPorId(idVeiculo);
-//
-//        if(veiculoOptional.isEmpty()){
-//            return ResponseEntity.notFound().build();
-//        }
-//
-//        service.deletar(veiculoOptional.get());
-//
-//        return  ResponseEntity.noContent().build();
-//    }
-
 
     @GetMapping
     public ResponseEntity<List<ResultadoPesquisaVeiculoDTO>> pesquisar(
